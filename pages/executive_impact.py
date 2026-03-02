@@ -132,7 +132,7 @@ def build_layout(date_start: str, date_end: str, currency: str = "NGN") -> html.
     fig_monthly.update_traces(line_color=EMERALD, line_width=2.5,
                                marker=dict(size=8, color=EMERALD_DARK))
     fig_monthly.update_layout(**PLOTLY_LAYOUT, height=340, showlegend=False,
-                               title_text="Monthly Fraud Identified",
+                               title_text="Monthly Fraud Transactions Flagged",
                                xaxis_range=[date_start, date_end])
     fig_monthly.update_yaxes(tickprefix=tickpfx, tickformat=",.0f")
     _add_deploy_line(fig_monthly)
@@ -167,7 +167,7 @@ def build_layout(date_start: str, date_end: str, currency: str = "NGN") -> html.
         color_discrete_map=CRYPTO_COLORS,
         labels={"month": "", "amount_ngn": f"Amount ({currency})", "asset": ""},
     )
-    fig_crypto.update_layout(**PLOTLY_LAYOUT, height=340, title_text="Monthly Crypto Flagged",
+    fig_crypto.update_layout(**PLOTLY_LAYOUT, height=340, title_text="Monthly Crypto Transactions Flagged",
                               barmode="stack",
                               legend=dict(orientation="h", y=-0.25),
                               xaxis_range=[date_start, date_end])
