@@ -1,0 +1,465 @@
+@import url('https://fonts.cdnfonts.com/css/open-runde');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Global ──────────────────────────────────────────────────────── */
+body {
+    font-family: 'Open Runde', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F9FAFB;
+    color: #374151;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Navbar ──────────────────────────────────────────────────────── */
+.navbar-custom {
+    background: linear-gradient(135deg, #0A1628 0%, #1B2A4A 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+}
+
+.navbar-brand-sub {
+    font-size: 0.78rem;
+    color: #9CA3AF;
+    margin-left: 12px;
+    font-weight: 400;
+}
+
+.nav-link-custom {
+    color: #9CA3AF !important;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 16px !important;
+    border-radius: 8px;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin: 0 2px;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: #FFFFFF !important;
+    background: rgba(16, 185, 129, 0.15);
+}
+
+/* ── KPI Cards ───────────────────────────────────────────────────── */
+.kpi-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+    height: 100%;
+}
+
+.kpi-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.kpi-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #0A1628;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.kpi-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ── Section Headers ─────────────────────────────────────────────── */
+.section-header {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0A1628;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #10B981;
+    margin-bottom: 16px;
+    margin-top: 28px;
+}
+
+/* ── Deployment Timeline ─────────────────────────────────────────── */
+.timeline-banner {
+    background: linear-gradient(135deg, #0A1628 0%, #1B2A4A 100%);
+    border-radius: 12px;
+    padding: 24px 32px;
+    color: #FFFFFF;
+    margin: 8px 0 24px 0;
+}
+
+.timeline-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9CA3AF;
+    margin-bottom: 16px;
+}
+
+.timeline-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.timeline-step {
+    display: inline-block;
+}
+
+.timeline-step .ts-date {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
+
+.timeline-step .ts-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.timeline-arrow {
+    color: #6B7280;
+    padding-top: 14px;
+    font-size: 1rem;
+}
+
+.timeline-step.active .ts-label {
+    color: #10B981;
+    font-weight: 700;
+}
+
+.timeline-step.active .ts-date {
+    color: #D1FAE5;
+}
+
+/* ── Chart Container ─────────────────────────────────────────────── */
+.chart-container {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    margin-bottom: 16px;
+}
+
+/* ── Page Title ──────────────────────────────────────────────────── */
+.page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0A1628;
+    margin-bottom: 2px;
+}
+
+.page-subtitle {
+    font-size: 0.92rem;
+    color: #6B7280;
+    margin-bottom: 20px;
+}
+
+/* ── Sidebar Filters ─────────────────────────────────────────────── */
+.filter-panel {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+/* ── Reason Code Badges ──────────────────────────────────────────── */
+.reason-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin: 0 4px 6px 0;
+}
+
+.reason-badge.high {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.reason-badge.medium {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+/* ── Data Tables ─────────────────────────────────────────────────── */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+    font-size: 0.82rem;
+    font-family: 'Open Runde', 'Inter', sans-serif;
+    padding: 8px 12px;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    font-size: 0.78rem;
+    font-family: 'Open Runde', 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6B7280;
+    background: #F9FAFB;
+    padding: 10px 12px;
+}
+
+/* ── Graph Explorer Legend ────────────────────────────────────────── */
+.graph-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: #374151;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ── Date Picker ────────────────────────────────────────────────── */
+.sidebar-date-picker .SingleDatePickerInput {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+}
+
+.sidebar-date-picker .DateInput {
+    width: 100%;
+    background: transparent;
+}
+
+.sidebar-date-picker .DateInput_input {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #374151;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar-date-picker .DateInput_input__focused {
+    border-bottom: 2px solid #10B981;
+    outline: none;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:hover {
+    background: #10B981;
+    border-color: #059669;
+    color: #FFFFFF;
+}
+
+.CalendarDay__selected_span,
+.CalendarDay__selected_span:hover {
+    background: #D1FAE5;
+    border-color: #D1FAE5;
+    color: #059669;
+}
+
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+    background: #D1FAE5;
+    border-color: #D1FAE5;
+    color: #059669;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+    border-right-color: #10B981;
+}
+
+/* ── Login Page ─────────────────────────────────────────────────── */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0A1628 0%, #1B2A4A 60%, #0A1628 100%);
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* dcc.Input renders a wrapper div; reset it and style the inner input */
+.login-input {
+    width: 100%;
+    margin-bottom: 14px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.login-input input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF !important;
+    font-size: 0.92rem;
+    font-family: 'Open Runde', 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+    -webkit-text-fill-color: #FFFFFF;
+}
+
+.login-input input::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+    -webkit-text-fill-color: #9CA3AF;
+}
+
+.login-input input:focus {
+    border-color: #10B981;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Open Runde', 'Inter', sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}
+
+.login-error {
+    color: #EF4444;
+    font-size: 0.82rem;
+    margin-top: 14px;
+    min-height: 20px;
+}
+
+/* ── Logout Icon Button ──────────────────────────────────────────── */
+.logout-icon-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #9CA3AF;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.logout-icon-button:hover {
+    color: #EF4444;
+    border-color: rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* ── Currency Toggle ─────────────────────────────────────────────── */
+.currency-toggle {
+    display: flex;
+    gap: 0;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.currency-btn {
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    background: #FFFFFF;
+    color: #6B7280;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.currency-btn:hover {
+    background: #F3F4F6;
+}
+
+.currency-btn.active {
+    background: #0A1628;
+    color: #FFFFFF;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.footer-text {
+    font-size: 0.72rem;
+    color: #9CA3AF;
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 40px;
+    border-top: 1px solid #E5E7EB;
+}
