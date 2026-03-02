@@ -333,32 +333,36 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* dcc.Input renders a bare <input> with the className directly */
-.login-input {
-    width: 100%;
-    margin-bottom: 14px;
-    padding: 12px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.12);
+/* dcc.Input — cover both bare <input> and wrapper <div><input> cases */
+.login-input,
+.login-input input {
+    width: 100% !important;
+    margin-bottom: 14px !important;
+    padding: 12px 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
     color: #FFFFFF !important;
-    font-size: 0.92rem;
-    font-family: 'Open Runde', 'Inter', sans-serif;
-    outline: none;
-    transition: border-color 0.2s, background 0.2s;
-    box-sizing: border-box;
-    -webkit-text-fill-color: #FFFFFF;
+    font-size: 0.92rem !important;
+    font-family: 'Open Runde', 'Inter', sans-serif !important;
+    outline: none !important;
+    transition: border-color 0.2s, background 0.2s !important;
+    box-sizing: border-box !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
 
-.login-input::placeholder {
-    color: #9CA3AF;
-    opacity: 1;
-    -webkit-text-fill-color: #9CA3AF;
+.login-input::placeholder,
+.login-input input::placeholder {
+    color: #9CA3AF !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #9CA3AF !important;
 }
 
-.login-input:focus {
-    border-color: #10B981;
-    background: rgba(255, 255, 255, 0.16);
+.login-input:focus,
+.login-input input:focus {
+    border-color: #10B981 !important;
+    background: rgba(255, 255, 255, 0.16) !important;
+    box-shadow: none !important;
 }
 
 .login-button {
